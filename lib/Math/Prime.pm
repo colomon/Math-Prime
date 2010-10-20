@@ -19,7 +19,7 @@ my sub next-prime(*@primes) {
 my @primes := (2, 3, &next-prime ... *);
 
 sub primes() is export(:DEFAULT) {
-    @primes;
+    @primes.iterator.list;
 }
 
 sub is-prime(Int $x) is export(:DEFAULT) {
