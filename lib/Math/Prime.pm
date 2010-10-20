@@ -16,10 +16,10 @@ my sub next-prime(*@primes) {
     }
 }
 
-# my @primes := (2, 3, &next-prime ... *);
+my @primes := (2, 3, &next-prime ... *);
 
 sub primes() is export(:DEFAULT) {
-    2, 3, &next-prime ... *;
+    @primes;
 }
 
 sub is-prime(Int $x) is export(:DEFAULT) {
