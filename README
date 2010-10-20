@@ -1,0 +1,12 @@
+First stab at implementing basic prime numbers code in Perl 6. Other than the
+fact it remembers the primes which have been calculated so far, nothing fancy.
+It's still disturbingly slow.
+
+Usage:
+
+
+use Math::Prime;
+
+say primes[^10];    # first ten primes
+say primes[60];     # the 61st prime
+say is-prime(100);  # check if a number is prime
