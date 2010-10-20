@@ -16,6 +16,17 @@ my sub next-prime(*@primes) {
     }
 }
 
+# my @primes := (2, 3, &next-prime ... *);
+
 sub primes() is export(:DEFAULT) {
     2, 3, &next-prime ... *;
+}
+
+sub is-prime(Int $x) is export(:DEFAULT) {
+    return False if $x == 1;
+    my $limit = $x.sqrt.Int;
+    for primes() -> $p {
+        return True if $p > $limit;
+        return False if $x %% $p;
+    }
 }
