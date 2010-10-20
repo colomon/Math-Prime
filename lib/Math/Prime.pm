@@ -5,7 +5,14 @@ my sub next-prime(*@primes) {
     return 3 if $i == 2;
     loop {
         $i += 2;
-        return $i unless [||] $i <<%%<< @primes;
+        my $prime = True;
+        for @primes {
+            if $i %% $_ {
+                $prime = False;
+                last;
+            }
+        }
+        return $i if $prime;    
     }
 }
 
