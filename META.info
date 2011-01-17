@@ -1,0 +1,8 @@
+{
+    "name"        : "Math::Prime",
+    "version"     : "*",
+    "description" : "Simple prime functions",
+    "depends"     : [],
+    "repo-type"   : "git",
+    "repo-url"    : "git://github.com/colomon/Math-Prime.git"
+}

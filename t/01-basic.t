@@ -12,4 +12,4 @@ is (1..20).grep(&is-prime).join(', '), '2, 3, 5, 7, 11, 13, 17, 19', 'is-prime 1
 # save the slow one for last
 is primes[999], 7919, "1000th prime is 7919";
 
-done_testing;
+done;
