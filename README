@@ -10,3 +10,5 @@ use Math::Prime;
 say primes[^10];    # first ten primes
 say primes[60];     # the 61st prime
 say is-prime(100);  # check if a number is prime
+
+Note that now Perl 6 has is-prime in CORE, this module is quite useless.
